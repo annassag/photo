@@ -46,6 +46,15 @@
 	  	margin-right: auto;
 	}
 
+		.image-captions-vertical {
+		font-family: neue-haas-grotesk-text, sans-serif;
+		font-size: 12px;
+		width: 45%;
+		display: block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	}
+
 	.article {
 		font-family: 'Bradford', serif;
 		font-size: 26px;
