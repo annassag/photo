@@ -17,7 +17,7 @@
 }
 
 		.mySlides img {
-			padding-top: 100px;
+			margin-top: 100px;
 			width: 65%;
 			display: block;
 		  	margin-left: auto;
@@ -78,7 +78,7 @@
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
-  	padding-left: 80px;	
+  	padding-left: 140px;	
 
 }
 
