@@ -400,11 +400,3 @@ padding: 30px 0 0 10px;
 			height: 60px;
 			padding: 0px 10px 20px 10px;
 }
-
-#mobile-menu:active {
-	background-color: white;
-}
-
-a:hover {background-color: white; }
-
-      }
