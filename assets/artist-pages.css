@@ -146,6 +146,10 @@ a {
 	color: black;
 }
 
+.buffer-mobile {
+	display: none;
+}
+
 /*MOBILE !!!!!!!!!!!!!!!!!!*/
 
 
@@ -263,7 +267,11 @@ a {
 			width: 100vw;
 	}
 
-
+.buffer-mobile {
+	height: 80px;
+	width: 100vw;
+	display: block;
+}
 
 
     }
