@@ -1,3 +1,7 @@
+	.border {
+			display: none;	
+	}
+
 .button-left {
 			background-image: url("arrow-left.png");
 			background-size: contain;
@@ -69,8 +73,6 @@
 		  position: relative;
 		  display: inline-block;
 		  width: 100%;
-
-
 		}
 
 		.dropdown-content {
@@ -78,15 +80,15 @@
   margin: 15px 0 0 15px;
   position: absolute;
   z-index: 300;
-  font-size: 24px;
+  font-size: 25px;
   text-transform: uppercase;
 font-family: 'OPSPastPerfect';
 }
 
 .dropdown-content a {
   color: black;
-  margin-bottom: 20px;
-  width: 120px;
+  margin-bottom: 10px;
+  width: 240px;
   text-decoration: none;
   display: inline-block;
   cursor: pointer;
@@ -102,13 +104,12 @@ font-family: 'OPSPastPerfect';
   display: none;
   position: fixed;
 width: 500px;
-height: 200px;
 top: 45px;
 right: 45px;
   background-color: black;
   color: white;
   z-index: 300;
-  font-size: 20px;
+  font-size: 25px;
   text-transform: uppercase;
 font-family: 'OPSPastPerfect';
 cursor: pointer;
@@ -140,6 +141,26 @@ cursor: pointer;
 .caption:hover {
 	color: black;
 }
+
+.no-padding-top {
+padding-top: -6px;
+margin-top: -6px;
+}
+
+.no-padding-bottom {
+padding-bottom: -4px;
+margin-bottom: -4px;
+}
+
+		#top-left-mobile {
+			display: none;
+		}
+
+		#top-right-mobile {
+			display: none;
+		}
+
+
 			@font-face {
 			  	font-family: 'OPSPastPerfect';
 			  	src:  url('OPSPastPerfect-Regular.woff2') format('woff2');
@@ -176,3 +197,214 @@ a {
 	text-decoration: none;
 	color: black;
 }
+
+#mobile-menu {
+			display: none;
+}
+
+#mobile-info {
+			display: none;
+}
+
+/*MOBILE !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!*/
+
+@media screen and (max-width: 800px) { 
+
+
+      body {
+        height: 100vh;
+        width: 100vw;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        outline: none;
+        margin: 0;
+        padding: 0;
+      }
+
+.button-left {
+			background-image: url("arrow-left.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 40px;
+			position: fixed;
+			left: 20px;
+			bottom: 20px;
+			z-index: 300;
+			cursor: pointer;
+		}
+
+		.top-left {
+			background-image: url("top-left.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 40px;
+			height: 40px;
+			position: fixed;
+			left: 20px;
+			top: 20px;
+			z-index: 300;
+			cursor: pointer;
+		}
+
+		.top-right {
+			background-image: url("top-right.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			position: fixed;
+			right: 20px;
+			top: 20px;
+			z-index: 300;
+			cursor: grab;
+		}
+
+		.button-right {
+			background-image: url("arrow-right.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 20px;
+			height: 40px;
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+			z-index: 300;
+			cursor: pointer;
+		}
+
+		.caption {
+			transform: scale(1);
+			margin: auto;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%);
+			height: 80px;
+			width: 100vw;
+			background-color: white;
+			bottom: 0;
+			z-index: 200;
+			font-family: 'OPSPastPerfect';
+			font-size: 24px;
+			text-align: center;
+			padding-top: 25px;
+			text-transform: uppercase;
+
+		}
+
+		.home {
+			display: none;
+		}
+
+
+	.border {
+		width: 100vw;
+		height: 20px;
+		position: fixed;
+		top: 0;
+		background-color: white;
+	}
+
+
+		#top-left-mobile {
+				background-image: url("top-left.png");
+				background-size: contain;
+				background-repeat: no-repeat;
+				width: 40px;
+				height: 40px;
+				position: fixed;
+				left: 20px;
+				top: 20px;
+				z-index: 300;
+				cursor: pointer;
+				display: block;
+		}
+
+		#top-right-mobile {
+			background-image: url("top-right.png");
+			background-size: contain;
+			background-repeat: no-repeat;
+			width: 30px;
+			height: 30px;
+			position: fixed;
+			right: 20px;
+			top: 20px;
+			z-index: 300;
+			cursor: grab;
+			display: block;
+		}
+
+
+		.top-left {
+			display: none;
+		}
+
+		.top-right {
+			display: none;
+		}
+
+		#mobile-info {
+			display: none;
+			width: 100vw;
+			height: 100vh;
+			background-color: black;
+			color: white;
+			  z-index: 300;
+  font-size: 20px;
+  text-transform: uppercase;
+font-family: 'OPSPastPerfect';
+position: absolute;
+top: 0;
+overflow: scroll}
+
+		#mobile-info p {
+padding: 0px 10px 20px 10px;
+		}
+
+.no-padding-top {
+padding-top: 30px;
+margin-top: 30px;
+}
+
+.no-padding-bottom {
+padding-bottom: 30px;
+margin-bottom: 0px;
+}
+
+#mobile-menu {
+			display: none;
+			width: 100vw;
+			height: 100vh;
+			background-color: black;
+			color: white;
+			  z-index: 300;
+  font-size: 24px;
+  text-transform: uppercase;
+font-family: 'OPSPastPerfect';
+position: absolute;
+top: 0;
+overflow: scroll;
+padding: 30px 0 0 10px;
+}
+
+
+#mobile-menu a {
+			text-decoration: none;
+			color: white;
+			padding: 0px 10px 20px 10px;
+}
+
+#mobile-menu img {
+			width: 60px;
+			height: 60px;
+			padding: 0px 10px 20px 10px;
+}
+
+#mobile-menu:active {
+	background-color: white;
+}
+
+a:hover {background-color: white; }
+
+      }

@@ -17,7 +17,7 @@
 }
 
 		.mySlides img {
-			margin-top: 100px;
+			padding-top: 100px;
 			width: 65%;
 			display: block;
 		  	margin-left: auto;
@@ -26,11 +26,18 @@
 
 	.mySlides-vertical img {
 			width: 45%;
-			padding-top: 100px;
 			display: block;
 		  	margin-left: auto;
 		  	margin-right: auto;
 		}
+
+	.mySlides-stills img {
+      margin-top: 40px;
+      width: 65%;
+      display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
 
 	.buffer {
 			height: 100px;
@@ -88,11 +95,16 @@
   	margin-left: auto;
   	margin-right: auto;
   	padding-left: 140px;	
-
+  	line-height: 1.3;
 }
 
 .caption {
 	cursor: default;
+}
+
+.half-buffer {
+	height: 50px;
+	width: 100vw;
 }
 
 			@font-face {
@@ -132,6 +144,7 @@ a {
 	color: black;
 }
 
+/*MOBILE !!!!!!!!!!!!!!!!!!*/
 
 
 @media screen and (max-width: 800px) { 
@@ -142,16 +155,111 @@ a {
         outline: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
       }
 
       body {
         height: 100vh;
         width: 100vw;
-        position: relative;
-  		touch-action: none;
       }
 
+#video {
+			width: 100%;
+			display: block;
+			padding: 20px 20px 20px 20px;
+		  	margin-left: auto;
+		  	margin-right: auto;
+}
+
+		.mySlides img {
+			width: 100%;
+			display: block;
+			padding: 20px 20px 10px 20px;
+			display: block;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		}
+
+	.mySlides-vertical img {
+			width: 100%;
+			display: block;
+			padding: 20px 20px 10px 20px;
+			display: block;
+		  	margin-left: auto;
+		  	margin-right: auto;
+		}
+
+	.mySlides-stills img {
+			width: 100%;
+			display: block;
+			padding: 0px 20px 10px 20px;
+		display: block;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -5px;
+    }
+
+.image-captions {
+		font-family: neue-haas-grotesk-text, sans-serif;
+		font-size: 10px;
+		width: 100%;
+		padding: 0px 20px 20px 20px;
+		display: block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	}
+
+		.image-captions-vertical {
+		font-family: neue-haas-grotesk-text, sans-serif;
+		font-size: 10px;
+		width: 100%;
+		padding: 0px 20px 20px 20px;
+		display: block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	}
+
+	.article {
+		font-family: 'Bradford', serif;
+		font-size: 20px;
+		line-height: 1.3;
+		width: 100%;
+		display: block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	  	padding: 20px;
+	}
+
+	.article .italics {
+		font-family: 'Bradford-italic';
+	}
+
+.article-author {
+	font-family: 'Bradford-italic', serif;
+	font-size: 20px;
+	width: 100%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	text-indent: 80px;	
+  	line-height: 1.3;
+}
+
+.article-quote {
+	font-family: 'Bradford';
+	font-size: 20px;
+	width: 100%;
+	display: block;
+  	margin-left: auto;
+  	margin-right: auto;
+  	padding-left: 60px;	
+  	line-height: 1.3;
+}
 	
+	.buffer {
+			height: 20px;
+			width: 100vw;
+	}
+
+
 
     }
