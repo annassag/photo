@@ -21,13 +21,31 @@
 			z-index: 300;
 			cursor: grab;
 		}
+
+		@media screen and (max-width: 800px) { 
+
+			#sound-btn img {
+			width: 40px;
+			height: 40px;
+			margin: auto;
+			left: 50%;
+			-ms-transform: translate(-50%, -50%);
+			transform: translate(-50%);
+			top: 20px;
+			z-index: 300;
+			cursor: grab;
+		}
+
+
+  }
+
 </style>
 
 
 </head>
 <body>
 <!-- 	ARTIST NAME -->
-
+  <div class="border"></div>
 <audio id="myAudio" hidden src="assets/tarah/tarahdouglas.mp3" type="audio/mpeg">
 </audio>
 
@@ -120,22 +138,21 @@
 
 
 <!-- STATIC STUFF -->
-<div class="sound-btn"></div>
+
 <a href="home.html"><div class="home">HOME</div></a>
-  <div class="button-left" onclick="plusDivs(-1)"></div>
-  <div class="button-right" onclick="plusDivs(1)"></div><div class="dropdown">
+<div class="dropdown">
   <div class="top-left">
   <div class="dropdown-content">
-    <a href="#">Mickey<br>Aloisio</a>
-    <a href="ronghui.html">Ronghui<br>Chen</a>
-    <a href="tarah.html">Tarah<br>Douglas</a>
-    <a href="#">Jackie<br>Furtado</a>
-    <a href="#">Max<br>Gavrich</a>
-    <a href="#">Nabil<br>Harb</a>
-    <a href="#">Dylan<br>Hausthor</a>
-    <a href="#">Annie<br>Ling</a>
-    <a href="#">Alex<br>Nelson</a>
-    <a href="rosemary.html">Rosemary<br>Warren</a>
+    <a href="#">Mickey Aloisio</a>
+    <a href="ronghui.html">Ronghui Chen</a>
+    <a href="tarah.html">Tarah Douglas</a>
+    <a href="#">Jackie Furtado</a>
+    <a href="#">Max Gavrich</a>
+    <a href="#">Nabil Harb</a>
+    <a href="#">Dylan Hausthor</a>
+    <a href="#">Annie Ling</a>
+    <a href="#">Alex Nelson</a>
+    <a href="rosemary.html">Rosemary Warren</a>
   </div>
 </div>
 </div></div>
@@ -143,36 +160,80 @@
 <div class="dropdown">
   <div class="top-right">
   <div class="dropdown-popup">
-INFO TEXTTTTTTTTTTTTTTTTTT
+<p class="no-padding-top" style="text-align: center;">SORRY WE MISSED YOU</p>
+<p>Yale School of Art’s 2021 Photography MFA thesis exhibition</p>
+<p>Green Hall Gallery, 1156 Chapel Street, New haven, CT. May 10 through 16, 2021</p>
+<p>Featuring work by: Mickey Aloisio, Ronghui Chen, tarah douglas, Jackie Furtado, Max Gavrich, Nabil Harb, Dylan Hausthor, Annie Ling, Alex Nelson, and Rosemary Warren.</p>
+<p>Exhibition identity by Nick Massarelli and Anna Sagström, Graphic Design MFAs ‘21.</p>
+
+<p class="no-padding-bottom">Installation photography by Liz Calvi, unless otherwise oted.</p>
   </div>
 </div>
 </div>
 
- <!-- STATIC STUFF -->
+<div id="top-right-mobile" onclick="infoMobile()"></div>
+  <div id="mobile-info" onclick="this.style.display = 'none'">
+    <p class="no-padding-top" style="text-align: center;">SORRY WE MISSED YOU</p>
+<p>Yale School of Art’s 2021 Photography MFA thesis exhibition</p>
+<p>Green Hall Gallery, 1156 Chapel Street, New haven, CT. May 10 through 16, 2021</p>
+<p>Featuring work by: Mickey Aloisio, Ronghui Chen, tarah douglas, Jackie Furtado, Max Gavrich, Nabil Harb, Dylan Hausthor, Annie Ling, Alex Nelson, and Rosemary Warren.</p>
+<p>Exhibition identity by Nick Massarelli and Anna Sagström, Graphic Design MFAs ‘21.</p>
+<p class="no-padding-bottom">Installation photography by Liz Calvi, unless otherwise noted.</p></div>
+
+<div id="top-left-mobile" onclick="menuMobile()"></div>
+<div id="mobile-menu">
+  <img src="assets/exit.png" onclick="closeMobile()">
+    <p><a href="mickey.html">Mickey Aloisio</a></p>
+    <p><a href="ronghui.html">Ronghui Chen</a></p>
+    <p><a href="tarah.html">Tarah Douglas</a></p>
+    <p><a href="jackie.html">Jackie Furtado</a></p>
+    <p><a href="max.html">Max Gavrich</a></p>
+    <p><a href="nabil.html">Nabil Harb</a></p>
+    <p><a href="dylan.html">Dylan Hausthor</a></p>
+    <p><a href="annie.html">Annie Ling</a></p>
+    <p><a href="alex.html">Alex Nelson</a></p>
+    <p><a href="rosemary.html">Rosemary Warren</a></p>
+</div>
+
+<!-- STATIC STUFF -->
+
+  <div class="button-left" onclick="javascript:location.href='dylan.html'"></div>
+  <div class="button-right" onclick="javascript:location.href='max.html'"></div>
 
 </body>
-
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script type="text/javascript">
 
-document.getElementById("sound-btn").addEventListener("click", function(){
-	var audio = document.getElementById('myAudio');
-  if(this.className == 'is-playing'){
-    this.className = "";
-	$("#my_image").attr("src","assets/sound-on.png");
-    audio.pause();
-  }else{
-    this.className = "is-playing";
-	$("#my_image").attr("src","assets/sound-off.png");
-    audio.play();
-  }
+	document.getElementById("sound-btn").addEventListener("click", function(){
+		var audio = document.getElementById('myAudio');
+	  if(this.className == 'is-playing'){
+	    this.className = "";
+		$("#my_image").attr("src","assets/sound-on.png");
+	    audio.pause();
+	  }else{
+	    this.className = "is-playing";
+		$("#my_image").attr("src","assets/sound-off.png");
+	    audio.play();
+	  }
+	});
+	  
+	  function infoMobile() {
+	  var x = document.getElementById("mobile-info");
+	    x.style.display = "block";
+	}
 
-});
+	  function menuMobile() {
+	  var x = document.getElementById("mobile-menu");
+	    x.style.display = "block";
+	}
+
+	  function closeMobile() {
+	  var x = document.getElementById("mobile-menu");
+	    x.style.display = "none";
+	}
+
+	document.addEventListener("touchstart", function() {}, true);
 
 </script>
-
-
-
-
 </html>

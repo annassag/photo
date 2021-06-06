@@ -29,22 +29,26 @@
 		}
 
 		#sorry img {
-			height: 90vh;
+			width: 55vh;
+      object-fit: contain;
 			top: 50%;
 			left: 50%;
 			position: relative;
 			-ms-transform: translate(-50%, -50%);
 			transform: translate(-50%, -50%);
+      z-index: 500;
+
 		}
 
 		#photo-container {
 			z-index: 100;
+      display: none;
 		}
 
 		.mySlides {
 			display: none;
-/*			height: 100vh;*/
-			width: 100%;
+/*		width: 100%;*/
+      background-size: cover;
 			left: 50%;
 			top: 50%;
 			position: absolute;
@@ -53,15 +57,20 @@
 			z-index: -100;
 		}
 
+        .mySlides-entry {
+/*    width: 100%;*/
+      background-size: cover;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: -100;
+    }
+
 		.caption {
 			cursor: pointer;
 		}
-
-
-		img {
-			z-index: 100;
-		}
-
 
 			@font-face {
 			  	font-family: 'OPSPastPerfect';
@@ -69,9 +78,25 @@
 			}
 
 
+.top-left {
+  display: none;
+}
 
+.top-right {
+  display: none;
+}
 
+.button-left {
+  display: none;
+}
 
+.button-right {
+  display: none;
+}
+
+#photo-container-mobile{
+  display: none;
+}
 
 @media screen and (max-width: 800px) { 
       * {
@@ -81,15 +106,48 @@
         outline: none;
         margin: 0;
         padding: 0;
-        overflow: hidden;
       }
 
       body {
         height: 100vh;
         width: 100vw;
-        position: relative;
-  		touch-action: none;
       }
+
+    #sorry {
+      width: 100vw;
+      height: 100vh;
+      z-index: 700;
+      background-color: black;
+      opacity: 0.9;
+    }
+
+    #sorry img {
+      width: 85vw;
+      top: 50%;
+      left: 50%;
+      position: relative;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: 500;
+
+    }
+
+
+    .mySlides {
+      display: none;
+      height: 100vh;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      z-index: -100;
+    }
+
+    .caption {
+      background-color: transparent;
+    }
+
 }
 
 
@@ -99,59 +157,69 @@
 <body>
 
 <div id="sorry"><img src="assets/title4.png"></div>
+<div id="entry"><img class="mySlides-entry" src="assets/1.jpg"></div>
 
 <div id="photo-container">
   <div><img class="mySlides" src="assets/1.jpg">
-  	<div class="caption">Dylan Hausthor</div>	
+        <a href="dylan.html">
+  	<div class="caption">Dylan Hausthor</div></a>
   	</div>
   <div><img class="mySlides" src="assets/2.jpg">
   	<a href="tarah.html">
   	<div class="caption">Tarah Douglas</div></a>
   	</div>
   <div><img class="mySlides" src="assets/3.jpg">
-  	<div class="caption">Max Gavrich</div>	
+        <a href="max.html">
+  	<div class="caption">Max Gavrich</div></a>	
   	</div> 	
-  <div><img class="mySlides" src="assets/4.jpg">
-  	<div class="caption">Annie Ling</div>	
+  <div><img class="mySlides" src="assets/4_02.jpg">
+        <a href="annie.html">
+  	<div class="caption">Annie Ling</div></a>
   	</div> 	
   <div><img class="mySlides" src="assets/5.jpg">
   	 <a href="rosemary.html">
   	<div class="caption" style="color:white">Rosemary Warren</div></a>
   	</div> 	
   <div><img class="mySlides" src="assets/6.jpg">
-  	<div class="caption">Mickey Aloisio</div>	
+        <a href="mickey.html">
+  	<div class="caption">Mickey Aloisio</div></a>
   	</div> 	
   <div><img class="mySlides" src="assets/7.jpg">
-  	<div class="caption">Alex Nelson</div>	
+        <a href="alex.html">
+  	<div class="caption">Alex Nelson</div></a>
   	</div> 	
   <div><img class="mySlides" src="assets/8.jpg">
-  	<div class="caption">Nabil Harb</div>	
+        <a href="nabil.html">
+  	<div class="caption">Nabil Harb</div></a>
   	</div> 	
   <div><img class="mySlides" src="assets/9.jpg">
   	  	<a href="ronghui.html">
   	<div class="caption">Ronghui Chen</div></a>	
   	</div> 	
   <div><img class="mySlides" src="assets/10.jpg">
-  	<div class="caption" style="color:white">Jackie Furtado</div>	
+        <a href="jackie.html">
+  	<div class="caption" style="color:white">Jackie Furtado</div>	</a>
   	</div> 	</div>
 
   <div class="button-left" onclick="plusDivs(-1)"></div>
   <div class="button-right" onclick="plusDivs(1)"></div>
 
 
+<!-- STATIC STUFF -->
+
 <div class="dropdown">
   <div class="top-left">
   <div class="dropdown-content">
-    <a href="#">Mickey<br>Aloisio</a>
-    <a href="ronghui.html">Ronghui<br>Chen</a>
-    <a href="tarah.html">Tarah<br>Douglas</a>
-    <a href="#">Jackie<br>Furtado</a>
-    <a href="#">Max<br>Gavrich</a>
-    <a href="#">Nabil<br>Harb</a>
-    <a href="#">Dylan<br>Hausthor</a>
-    <a href="#">Annie<br>Ling</a>
-    <a href="#">Alex<br>Nelson</a>
-    <a href="rosemary.html">Rosemary<br>Warren</a>
+    <a href="#">Mickey Aloisio</a>
+    <a href="ronghui.html">Ronghui Chen</a>
+    <a href="tarah.html">Tarah Douglas</a>
+    <a href="#">Jackie Furtado</a>
+    <a href="#">Max Gavrich</a>
+    <a href="#">Nabil Harb</a>
+    <a href="#">Dylan Hausthor</a>
+    <a href="#">Annie Ling</a>
+    <a href="#">Alex Nelson</a>
+    <a href="rosemary.html">Rosemary Warren</a>
   </div>
 </div>
 </div></div>
@@ -159,12 +227,42 @@
 <div class="dropdown">
   <div class="top-right">
   <div class="dropdown-popup">
-INFO TEXTTTTTTTTTTTTTTTTTT
+<p class="no-padding-top" style="text-align: center;">SORRY WE MISSED YOU</p>
+<p>Yale School of Art’s 2021 Photography MFA thesis exhibition</p>
+<p>Green Hall Gallery, 1156 Chapel Street, New haven, CT. May 10 through 16, 2021</p>
+<p>Featuring work by: Mickey Aloisio, Ronghui Chen, tarah douglas, Jackie Furtado, Max Gavrich, Nabil Harb, Dylan Hausthor, Annie Ling, Alex Nelson, and Rosemary Warren.</p>
+<p>Exhibition identity by Nick Massarelli and Anna Sagström, Graphic Design MFAs ‘21.</p>
+
+<p class="no-padding-bottom">Installation photography by Liz Calvi, unless otherwise oted.</p>
   </div>
 </div>
 </div>
 
+<div id="top-right-mobile" onclick="infoMobile()"></div>
+  <div id="mobile-info" onclick="this.style.display = 'none'">
+    <p class="no-padding-top" style="text-align: center;">SORRY WE MISSED YOU</p>
+<p>Yale School of Art’s 2021 Photography MFA thesis exhibition</p>
+<p>Green Hall Gallery, 1156 Chapel Street, New haven, CT. May 10 through 16, 2021</p>
+<p>Featuring work by: Mickey Aloisio, Ronghui Chen, tarah douglas, Jackie Furtado, Max Gavrich, Nabil Harb, Dylan Hausthor, Annie Ling, Alex Nelson, and Rosemary Warren.</p>
+<p>Exhibition identity by Nick Massarelli and Anna Sagström, Graphic Design MFAs ‘21.</p>
+<p class="no-padding-bottom">Installation photography by Liz Calvi, unless otherwise noted.</p></div>
 
+<div id="top-left-mobile" onclick="menuMobile()"></div>
+<div id="mobile-menu">
+  <img src="assets/exit.png" onclick="closeMobile()">
+    <p><a href="mickey.html">Mickey Aloisio</a></p>
+    <p><a href="ronghui.html">Ronghui Chen</a></p>
+    <p><a href="tarah.html">Tarah Douglas</a></p>
+    <p><a href="jackie.html">Jackie Furtado</a></p>
+    <p><a href="max.html">Max Gavrich</a></p>
+    <p><a href="nabil.html">Nabil Harb</a></p>
+    <p><a href="dylan.html">Dylan Hausthor</a></p>
+    <p><a href="annie.html">Annie Ling</a></p>
+    <p><a href="alex.html">Alex Nelson</a></p>
+    <p><a href="rosemary.html">Rosemary Warren</a></p>
+</div>
+
+<!-- STATIC STUFF -->
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
@@ -204,19 +302,36 @@ function showNames(n) {
   for (i = 0; i < x.length; i++) {
     x[i].style.display = "none";  
   }
-  x[nameIndex-1].style.display = "block";  
+  x[nameIndex-1].style.display = "block"; 
 }
 
 $("#sorry").click(function(){
-
     $("#sorry").remove();
-
+    $("#entry").remove();
+    $("#photo-container").show();
+    $(".top-left").show();
+    $(".top-right").show();
+    $(".button-left").show();
+    $(".button-right").show();
 
 });
+  
+  function infoMobile() {
+  var x = document.getElementById("mobile-info");
+    x.style.display = "block";
+}
+
+  function menuMobile() {
+  var x = document.getElementById("mobile-menu");
+    x.style.display = "block";
+}
+
+  function closeMobile() {
+  var x = document.getElementById("mobile-menu");
+    x.style.display = "none";
+}
+
+document.addEventListener("touchstart", function() {}, true);
 
 </script>
-
-
-
-
 </html>
