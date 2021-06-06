@@ -7,6 +7,8 @@
   			overflow-x: hidden;
 		}
 
+
+
 #video {
 			padding-top: 100px;
 			width: 65%;
@@ -240,7 +242,8 @@ a {
 	display: block;
   	margin-left: auto;
   	margin-right: auto;
-  	text-indent: 80px;	
+  	text-indent: 60px;	
+  	padding-left: 20px;
   	line-height: 1.3;
 }
 
@@ -259,6 +262,7 @@ a {
 			height: 20px;
 			width: 100vw;
 	}
+
 
 
 

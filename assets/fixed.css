@@ -1,7 +1,7 @@
-	.border {
-			display: none;	
-	}
 
+.border {
+	display: none;
+}
 .button-left {
 			background-image: url("arrow-left.png");
 			background-size: contain;
@@ -161,6 +161,7 @@ margin-bottom: -4px;
 		}
 
 
+
 			@font-face {
 			  	font-family: 'OPSPastPerfect';
 			  	src:  url('OPSPastPerfect-Regular.woff2') format('woff2');
@@ -221,6 +222,16 @@ a {
         margin: 0;
         padding: 0;
       }
+
+      .border {
+	width: 100vw;
+	height: 20px;
+	background-color: white;
+	position: fixed;
+	top: 0;
+	z-index: 500;
+	display: block;
+}
 
 .button-left {
 			background-image: url("arrow-left.png");
@@ -296,15 +307,6 @@ a {
 		.home {
 			display: none;
 		}
-
-
-	.border {
-		width: 100vw;
-		height: 20px;
-		position: fixed;
-		top: 0;
-		background-color: white;
-	}
 
 
 		#top-left-mobile {
